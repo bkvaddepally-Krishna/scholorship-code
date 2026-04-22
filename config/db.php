@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost","u453722092_mst2026","v!6@YptD","u453722092_mst2026");
+$conn = new mysqli("localhost","u453722092_mstt","t4=M4!UKnV","u453722092_mstt");
 
 if($conn->connect_error){
     die("DB Error");
