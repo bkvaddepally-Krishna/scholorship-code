@@ -1,0 +1,39 @@
+
+CREATE DATABASE IF NOT EXISTS school_erp;
+USE school_erp;
+
+CREATE TABLE admins (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ username VARCHAR(100),
+ password VARCHAR(255)
+);
+
+CREATE TABLE students (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ ms_no VARCHAR(50),
+ name VARCHAR(100),
+ class VARCHAR(50),
+ phone VARCHAR(15)
+);
+
+CREATE TABLE exams (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(100),
+ exam_date DATE,
+ status VARCHAR(20)
+);
+
+CREATE TABLE marks (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ student_id INT,
+ exam_id INT,
+ subject VARCHAR(100),
+ marks INT,
+ max_marks INT
+);
+
+CREATE TABLE logs (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ action TEXT,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
